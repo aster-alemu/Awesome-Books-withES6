@@ -1,4 +1,3 @@
-
 /* eslint-disable no-unused-vars */
 // Select the Links to the pages
 const bookLink = document.querySelector('nav ul li .book-link');
@@ -9,11 +8,16 @@ const contact = document.querySelector('.contact');
 const form = document.querySelector('form');
 const currentDate = document.querySelector('.date');
 const pageHeading = document.querySelector('.main-heading');
-import {title} from './modules/showbookfunction.js';
-import {author} from './modules/showbookfunction.js';
+import { title } from './modules/showbookfunction.js';
+
+import { author } from './modules/showbookfunction.js';
+
 import { loggedBooks } from './modules/showbookfunction.js';
-import {books} from './modules/showbookfunction.js';
-import {showBook} from './modules/showbookfunction.js';
+
+import { books } from './modules/showbookfunction.js';
+
+import { showBook } from './modules/showbookfunction.js';
+
 window.onload = () => {
   if (localStorage.getItem('books')) {
    let books = JSON.parse(localStorage.getItem('books'));

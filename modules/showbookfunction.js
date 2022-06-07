@@ -26,5 +26,5 @@ let removeBook = (index) => {
   showBook();
   localStorage.setItem('books', JSON.stringify(books));
 };
-export {books, showBook,removeBook};
 export {title, author, loggedBooks};
+export {books, showBook};
