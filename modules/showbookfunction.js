@@ -10,8 +10,8 @@ let showBook = (() => {
     loggedBooks.innerHTML += `
         <div class="card">
             <p class="title">${books[i].title} by ${books[i].author}</p>
-            <button class="deleteBtn" onclick="removeBook(${i})">Remove</button>
-        </div>
+            <button class="deleteBtn" onclick="removeBook({$i}">Remove</button>
+        </div> 
    `;
 
     // Reset the values to null to allow the user to input again
@@ -21,11 +21,10 @@ let showBook = (() => {
 });
 
 let removeBook = (index) => {
-  console.log('btn clicked');
+
   books.splice(index, 1);
   showBook();
   localStorage.setItem('books', JSON.stringify(books));
 };
-
 export {books, showBook,removeBook};
 export {title, author, loggedBooks};
