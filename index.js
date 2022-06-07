@@ -8,19 +8,16 @@ const contact = document.querySelector('.contact');
 const form = document.querySelector('form');
 const currentDate = document.querySelector('.date');
 const pageHeading = document.querySelector('.main-heading');
-import { title } from './modules/showbookfunction.js';
+import { title, author, loggedBooks, books, showBook } from './modules/showbookfunction.js';
 
-import { author } from './modules/showbookfunction.js';
-
-import { loggedBooks } from './modules/showbookfunction.js';
-
-import { books } from './modules/showbookfunction.js';
-
-import { showBook } from './modules/showbookfunction.js';
+// import { author } from './modules/showbookfunction.js';
+// import { loggedBooks } from './modules/showbookfunction.js';
+// import { books } from './modules/showbookfunction.js';
+// import { showBook } from './modules/showbookfunction.js';
 
 window.onload = () => {
   if (localStorage.getItem('books')) {
-   let books = JSON.parse(localStorage.getItem('books'));
+    const books = JSON.parse(localStorage.getItem('books'));
   }
   contact.classList.add('hide');
   loggedBooks.classList.add('hide');
