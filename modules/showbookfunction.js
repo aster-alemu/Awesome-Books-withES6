@@ -3,8 +3,8 @@
 const title = document.querySelector('.title-input');
 const author = document.querySelector('.author-input');
 const loggedBooks = document.querySelector('.logged-books');
-let books = [];
-let showBook = (() => {
+const books = [];
+const showBook = (() => {
   loggedBooks.innerHTML = '';
   for (let i = 0; i < books.length; i += 1) {
     loggedBooks.innerHTML += `
@@ -20,11 +20,11 @@ let showBook = (() => {
   }
 });
 
-let removeBook = (index) => {
+const removeBook = (index) => {
 
   books.splice(index, 1);
   showBook();
   localStorage.setItem('books', JSON.stringify(books));
 };
-export {title, author, loggedBooks};
-export {books, showBook};
+export { title, author, loggedBooks };
+export { books, showBook };

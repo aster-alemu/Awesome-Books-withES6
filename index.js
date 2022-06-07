@@ -2,7 +2,7 @@
 // Select the Links to the pages
 
 import {
-  title, author, loggedBooks, books, showBook
+  title, author, loggedBooks, books, showBook, 
 } from './modules/showbookfunction.js';
 
 const bookLink = document.querySelector('nav ul li .book-link');
